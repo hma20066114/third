@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        <script>
+        // Function to calculate the sum of multiples of a or b below n
+        function sumOfMultiples(a, b, n) {
+            let sum = 0;
+            // Loop through all numbers from 1 to n-1
+            for (let i = 1; i < n; i++) {
+                // Check if the number is a multiple of a or b
+                if (i % a === 0 || i % b === 0) {
+                    sum += i; // Add the number to the sum
+                }
+            }
+            return sum;
+        }
+
+        // Function to handle button click and display result
+        function calculateSum() {
+            // Get input values and convert to integers
+            const a = parseInt(document.getElementById('inputA').value);
+            const b = parseInt(document.getElementById('inputB').value);
+            const n = parseInt(document.getElementById('inputN').value);
+
+            // Validate inputs
+            if (isNaN(a) || isNaN(b) || isNaN(n)) {
+                alert("Please enter valid numbers for a, b, and n.");
+                return;
+            }
+            if (n <= 0) {
+                alert("Please enter a positive number for n.");
+                return;
+            }
+
+            // Calculate the sum and show the result
+            const result = sumOfMultiples(a, b, n);
+            alert(`The sum of all multiples of ${a} or ${b} below ${n} is: ${result}`);
+        }
+    </script>
+    </script>
+</head>
+<body>
+    <p>Hello World!</p>
+    <input type="text" id="in">
+    <button onclick='c()'>Press Me</button>
+
+    <p>The prompt: <button onclick="doIt()">Press me!</button></p>
+</body>
+</html>
