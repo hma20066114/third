@@ -41,10 +41,20 @@
     </script>
 </head>
 <body>
-    <p>Hello World!</p>
-    <input type="text" id="in">
-    <button onclick='c()'>Press Me</button>
-
-    <p>The prompt: <button onclick="doIt()">Press me!</button></p>
+<div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+            <label for="inputA" class="block text-sm font-medium text-gray-700">a</label>
+            <input id="inputA" type="number" class="mt-1 p-2 border rounded-md w-full" required>
+        </div>
+        <div class="mb-4">
+            <label for="inputB" class="block text-sm font-medium text-gray-700">b</label>
+            <input id="inputB" type="number" class="mt-1 p-2 border rounded-md w-full" required>
+        </div>
+        <div class="mb-4">
+            <label for="inputN" class="block text-sm font-medium text-gray-700">n</label>
+            <input id="inputN" type="number" class="mt-1 p-2 border rounded-md w-full" required>
+        </div>
+        <button onclick="calculateSum()" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Calculate</button>
+    </div>
 </body>
 </html>
